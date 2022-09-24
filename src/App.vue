@@ -16,6 +16,7 @@ const layouts = {
 };
 
 const currentLayout = computed(() => {
+  //@ts-ignore
   return layouts[route.meta?.layout] ?? layouts["GuestLayout"];
 });
 </script>
