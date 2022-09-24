@@ -4,11 +4,30 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: "/",
+      name: "splash",
+      component: () => import("../views/SplashView.vue"),
+      meta: {
+        title: "Splash",
+        layout: "guest",
+      },
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: () => import("../views/LoginView.vue"),
+      meta: {
+        title: "Login",
+        layout: "guest",
+      },
+    },
+    {
       path: "/dashboard",
       name: "dashboard",
       component: () => import("../views/DashboardView.vue"),
       meta: {
         title: "Dashboard",
+        layout: "main",
       },
     },
     {
@@ -17,6 +36,7 @@ const router = createRouter({
       component: () => import("../views/CustomersView.vue"),
       meta: {
         title: "Clientes",
+        layout: "main",
       },
     },
     {
@@ -25,6 +45,7 @@ const router = createRouter({
       component: () => import("../views/OrdersView.vue"),
       meta: {
         title: "Pedidos",
+        layout: "main",
       },
     },
     {
@@ -33,6 +54,7 @@ const router = createRouter({
       component: () => import("../views/ProductsView.vue"),
       meta: {
         title: "Produtos",
+        layout: "main",
       },
     },
     {
@@ -41,6 +63,7 @@ const router = createRouter({
       component: () => import("../views/SettingsView.vue"),
       meta: {
         title: "Configurações",
+        layout: "main",
       },
     },
   ],

@@ -39,36 +39,38 @@ const people = [
             <div
               class="overflow-hidden shadow-sm ring-1 ring-black ring-opacity-5"
             >
-              <table class="min-w-full divide-y divide-gray-300">
+              <table
+                class="min-w-full divide-y divide-gray-300 dark:divide-gray-700"
+              >
                 <thead>
                   <tr>
                     <th
                       scope="col"
-                      class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6 lg:pl-8"
+                      class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6 lg:pl-8 dark:text-gray-50"
                     >
                       ID
                     </th>
                     <th
                       scope="col"
-                      class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-50"
                     >
                       Nome
                     </th>
                     <th
                       scope="col"
-                      class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-50"
                     >
                       Documento
                     </th>
                     <th
                       scope="col"
-                      class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-50"
                     >
                       Email
                     </th>
                     <th
                       scope="col"
-                      class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-50"
                     >
                       Telefone
                     </th>
@@ -80,10 +82,12 @@ const people = [
                     </th>
                   </tr>
                 </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
+                <tbody
+                  class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700"
+                >
                   <tr v-for="person in people" :key="person.email">
                     <td
-                      class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-6 lg:pl-8"
+                      class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-6 lg:pl-8 dark:text-gray-50"
                     >
                       {{ person.id }}
                     </td>
@@ -110,7 +114,9 @@ const people = [
                     <td
                       class="relative py-4 pl-3 pr-4 text-sm font-medium text-right whitespace-nowrap sm:pr-6 lg:pr-8"
                     >
-                      <a href="#" class="text-blue-600 hover:text-blue-900"
+                      <a
+                        href="#"
+                        class="text-blue-600 hover:text-blue-900 dark:text-blue-300 dark:hover:text-blue-400"
                         >Edit<span class="sr-only">, {{ person.name }}</span></a
                       >
                     </td>

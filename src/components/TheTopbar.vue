@@ -5,7 +5,11 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
 </script>
 
 <template>
-  <Disclosure as="nav" class="block bg-gray-100 md:hidden" v-slot="{ open }">
+  <Disclosure
+    as="nav"
+    class="block bg-gray-100 dark:bg-gray-900 md:hidden"
+    v-slot="{ open }"
+  >
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <div class="flex items-center flex-shrink-0">
@@ -19,7 +23,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
         <div class="flex items-center -mr-2">
           <!-- Mobile menu button -->
           <DisclosureButton
-            class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-300 focus:ring-offset-2"
           >
             <span class="sr-only">Open main menu</span>
             <Bars3Icon v-if="!open" class="block w-6 h-6" aria-hidden="true" />
@@ -41,7 +45,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
             :to="item.href"
             :class="[
               $router.currentRoute.value.name === item.href
-                ? '  text-blue-700'
+                ? '  text-blue-500 dark:text-blue-300'
                 : 'border-transparent text-gray-600   hover:text-gray-800',
               'block pl-3 pr-4 py-2  text-base font-medium cursor-pointer',
             ]"
@@ -50,14 +54,14 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
           </RouterLink>
         </DisclosureButton>
       </div>
-      <div class="pt-4 pb-3 border-t border-gray-200">
+      <div class="pt-4 pb-3 border-t border-gray-200 dark:border-gray-700">
         <div class="flex items-center px-4">
           <div class="flex-shrink-0">
             <span
-              class="inline-block w-10 h-10 overflow-hidden bg-gray-100 rounded-full"
+              class="inline-block w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-800"
             >
               <svg
-                class="w-full h-full text-gray-300"
+                class="w-full h-full text-gray-300 dark:text-gray-600"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -68,7 +72,9 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline";
             </span>
           </div>
           <div class="ml-3">
-            <div class="text-base font-medium text-gray-800">Everton</div>
+            <div class="text-base font-medium text-gray-800 dark:text-gray-100">
+              Everton
+            </div>
             <div class="text-sm font-medium text-gray-500">
               Everton.w@hotmail.com
             </div>
